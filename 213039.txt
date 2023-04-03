@@ -1,0 +1,41 @@
+git init -> Inicializiranje na folderot
+git remote add origin https://github.com/VedaNarashanova/SI_2023_lab1_213039_.git -> dodavanje na remote repo
+git add . -> Site Untracked da bidat spremni za commit
+git commit -m "Initial commit" -> commit so poraka
+git add .
+git commit -m "Add java class"
+git push origin master -> sinhronizacija na odalecnoto repo
+
+git checkout -b bug1 -> prefrlanje i kreiranje na bug1 granka
+git checkout -b bug2 -> prefrlanje i kreiranje na bug2 granka
+git checkout -b bug3 -> prefrlanje i kreiranje na bug3 granka
+
+git checkout bug1 -> prefrlanje na bug1 granka
+git add .
+git commit -m "Fix wrong loop for reading"
+git checkout bug2
+git add .
+git commit -m "Fix wrong condition in filterOddNumbers"
+git checkout bug3
+git add .
+git commit -m "Fix method sumEvenNumbers"
+
+git push -all -> Sinhronizacija na site granki so dalecnoto repo
+
+git checkout master
+
+git merge bug1
+git push origin master -> Sinhronizacija na master grankata
+git merge bug2
+git push origin master
+
+git checkout bug3
+git rebase master -> процесот на комбинирање на низа од commits во нов base commit
+
+git checkout master
+git merge bug3
+
+git push --all --force -> Potrebno e upotreba na --force (Iako ne e dobro za vo praksa)
+
+git add .
+git commit -m "Final commit"
